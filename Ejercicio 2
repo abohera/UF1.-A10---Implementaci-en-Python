@@ -1,0 +1,25 @@
+def main():
+    countaprob = 0
+    countsuspe = 0
+    notaprob = 0
+    notasuspe = 0
+    n = int(input("¿Cuantas notas vas a introducir?: "))
+    for i in range(n):
+        nota = int(input("Introduce una nota: "))
+        while nota < 0 or nota > 10:
+            nota = int(input("Introduce una nota del 0 al 10: "))
+        if nota > 5:
+            notaprob += nota
+            countaprob += 1
+        else:
+            notasuspe += nota
+            countsuspe += 1
+    mediaaprob = notaprob/countaprob
+    mediasuspe = notasuspe/countsuspe
+    print(("\nLa media de aprobados es: %.2f") % (mediaaprob))
+    print(("La media de suspensos es: %.2f") % (mediasuspe))
+    print(("El número total de aprobados es: %d") % (countaprob))
+    print(("El número total de suspensos es: %d") % (countsuspe))
+
+if __name__ == "__main__":
+    main()
