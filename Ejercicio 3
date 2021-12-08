@@ -1,0 +1,25 @@
+def main():
+    users = int(input("¿Cuantos usuarios queires introducir?: "))
+    this_username = list()
+    this_department = list()
+    this_classroom = list()
+    for i in range(users):
+        print("\nUsuario %u: " % (i+1))
+        username = input("Introduce el nombre del usuario: ")
+        this_username.append(username)
+        department = input("Introduce el departamento: ")
+        this_department.append(department)
+        classroom = int(input("Introduce el número del aula: "))
+        this_classroom.append(classroom)
+        while this_classroom[i] < 1 or this_classroom[i] > 15:
+            this_classroom[i] = int(input("Introduce un número del 1 al 15 incluidos: "))
+    print("\n")
+    print("TABLA USUARIOS")
+    print("USERNAME | DEPARTMENT | CLASSROOM")
+    for i in range(users):
+        print(this_username[i], end=" | ")
+        print(this_department[i], end=" | ")
+        print(this_classroom[i])
+
+if __name__ == "__main__":
+    main()
