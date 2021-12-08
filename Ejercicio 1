@@ -1,0 +1,12 @@
+def main():
+    n1 = int(input("Introduce un número: "))
+    n2 = int(input("Introduce un número: "))
+    if n1 < n2:
+        print(("Números dentro del intervalo %d y %d: ") % (n1,n2))
+        for i in range(n1+1,n2):
+            print(i)
+    else:
+        print("Error: el primer número es mayor que el segundo")
+
+if __name__ == "__main__":
+    main()
